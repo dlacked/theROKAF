@@ -1,23 +1,34 @@
 html, body{
 	margin: 0;
 	background-color: #f3f3f3;
+ 	font-family: 굴림, 'Apple SD Gothic Neo', Sans-serif;
 }
 
 h1{
 	text-align: center;
-	font-size: 4vw;
+	font-size: 50px;
 }
 
-table{
+#generationTable{
 	margin: 0 auto;
 	width: 80%;
-	background-color: white;
-	border-radius: 15px;
 	text-align: center;
+	margin-bottom: 100px;
 }
 
-tr{
+.tr{
+	display: grid;
+	grid-template-columns: auto auto 1fr auto;
+	align-items:center;
 	height: 100px;
+	cursor: pointer;
+	background-color: white;
+	transition: 0.5s;
+}
+
+.tr:hover{
+	background-color: #f6f6f6;
+	transition: 0.5s;
 }
 
 .generationColor{
@@ -28,12 +39,13 @@ tr{
 	margin: 20px;
 }
 
-#innerProgressBar{
+.innerProgressBar{
 	margin: 0 auto;
 	width: 90%;
 	background-color: #f1f1f1;
 	height: 10px;
 	border-radius: 3px;
+	
 }
 
 .outerProgressBar{
@@ -46,13 +58,35 @@ tr{
 .progress{
 	font-weight: normal;
 	font-size: 20px;
-	width: 200px;
+	margin: 20px;
 }
 
-td{
+div{
 	font-size: 30px;
 	font-weight: bold;
-	margin: 20px;
+	
+}
+
+#copyright{
+	width: 100%;
+	background-color: #0b106a;
+	display: flex;
+	color: white;
+}
+
+#copyright img{
+	width: 30px;
+	padding: 20px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+#copyright p{
+	font-size: 10px;
+	margin-top: auto;
+	margin-bottom: 30px;
+	margin-left: -10px;
+	font-weight: bold;
 }
 
 @media (max-width: 600px){
@@ -61,12 +95,27 @@ td{
 	}
 }
 
-@media (max-width: 400px){
-	.progress, .generationColor{
+@media (max-width: 450px){
+	.innerProgressBar, .outerProgressBar{
 		display: none;
 	}
 	
-	td{
+	div{
 		font-size: 20px;
 	}
 }
+
+@media (max-width: 350px){
+	.generationColor{
+		display: none;
+	}
+	
+	.generation{
+		margin: 20px;
+	}
+	
+	.progress{
+		font-size: 15px;
+	}
+}
+
