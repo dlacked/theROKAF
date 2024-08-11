@@ -3,18 +3,19 @@
 	"short_name": "theROKAF",
 	"icons": [
 		{
-			"src": "/img/dlacked_logo.png",
+			"src": "/img/therokaf_logo.png",
 			"type": "image/png",
-			"sizes": "71x96"
+			"sizes": "600x600"
 		}
 	],
 	"start_url": "./index.html",
 	"scope": ".",
+	"categories": "productivity",
 	"display": "standalone",
-	"orientation": "portrait-primary",
+	"orientation": "landscape",
 	"background_color": "#f3f3f3",
 	"theme_color": "#f3f3f3",
-	"description": "대한민국공군 병 기수표 및 복무율 확인하기. 우리는 자랑스러운 대한민국 공군이다.",
+	"description": "자랑스러운 대한민국 공군의 병으로서 기본적으로 확인해야하는 복무율, 여기서 확인하자.",
 	"dir": "ltr",
 	"lang": "ko-KR"
 
