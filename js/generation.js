@@ -63,20 +63,20 @@ const progress1 = new SetProgress({
 //전역 년도가 현재 년도와 같으면 현재년도 1월 1일부터 전역일자까지의 복무율 퍼센트를 계산
 //이외 현재년도 1월 1일부터 다음 해 1월 1일까지 복무율 퍼센트를 계산
 let progress3 = new SetProgress({
-	startDate: `${today.getFullYear()}-1-1`, 
-	endDate: `${today.getFullYear()+1}-1-1`,
+	startDate: `${today.getFullYear()}/1/1`, 
+	endDate: `${today.getFullYear()+1}/1/1`,
 	classNum: 1
 });
 if (newGraduateDate.getFullYear() === today.getFullYear()){
 	progress3 = new SetProgress({
-		startDate: `${today.getFullYear()}-1-1`, 
-		endDate: `${newGraduateDate.getFullYear()}-${newGraduateDate.getMonth()+1}-${newGraduateDate.getDate()}`,
+		startDate: `${today.getFullYear()}/1/1`, 
+		endDate: `${newGraduateDate.getFullYear()}/${newGraduateDate.getMonth()+1}/${newGraduateDate.getDate()}`,
 		classNum: 1
 	});
 }else if (newJoinedDate.getFullYear() === today.getFullYear()){
 	progress3 = new SetProgress({
-		startDate: `${newJoinedDate.getFullYear()}-${newJoinedDate.getMonth()+1}-${newJoinedDate.getDate()}`, 
-		endDate: `${today.getFullYear()+1}-1-1`,
+		startDate: `${newJoinedDate.getFullYear()}/${newJoinedDate.getMonth()+1}/${newJoinedDate.getDate()}`, 
+		endDate: `${today.getFullYear()+1}/1/1`,
 		classNum: 1
 	});
 }
