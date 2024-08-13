@@ -1,0 +1,122 @@
+html, body{
+	margin: 0;
+	background-color: #f3f3f3;
+ 	font-family: Sans-serif, 'Apple SD Gothic Neo', 굴림;
+}
+
+h1{
+	text-align: center;
+	font-size: 50px;
+}
+
+#generationTable{
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	margin-bottom: 100px;
+	border-radius: 15px;
+	background-color: #f9f9f9;
+}
+
+.tr{
+	display: grid;
+	grid-template-columns: auto auto 1fr auto;
+	align-items:center;
+	height: 100px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.tr:hover{
+	background-color: #f1f1f1;
+	transition: 0.5s;
+}
+
+.generationColor{
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+	background-color: #3399ff;
+	margin: 20px;
+}
+
+.innerProgressBar{
+	margin: 0 auto;
+	width: 90%;
+	background-color: #f1f1f1;
+	height: 10px;
+	border-radius: 3px;
+	
+}
+
+.outerProgressBar{
+	width: 0%;
+	background-color: #3399ff;
+	height: 10px;
+	border-radius: 3px;
+}
+
+.progress{
+	font-weight: normal;
+	font-size: 20px;
+	margin: 20px;
+}
+
+.generation{
+	font-size: 30px;
+	font-weight: bold;
+	
+}
+
+#copyright{
+	width: 100%;
+	background-color: #0b106a;
+	display: flex;
+	color: white;
+}
+
+#copyright img{
+	width: 30px;
+	padding: 20px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+#copyright p{
+	font-size: 10px;
+	margin-top: auto;
+	margin-bottom: 30px;
+	margin-left: -10px;
+	font-weight: bold;
+}
+
+@media (max-width: 600px){
+	h1{
+		font-size: 7vw;
+	}
+}
+
+@media (max-width: 450px){
+	.innerProgressBar, .outerProgressBar{
+		display: none;
+	}
+	
+	.generation{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 350px){
+	.generationColor{
+		display: none;
+	}
+	
+	.generation{
+		margin: 20px;
+	}
+	
+	.progress{
+		font-size: 15px;
+	}
+}
+

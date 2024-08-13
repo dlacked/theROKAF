@@ -7,18 +7,14 @@ let generatedGeneration = 0;
 for (let i = 0; i < joinedDate.length; i++){
 	if (new Date(graduateDate[i]) > today && new Date(joinedDate[i]) <= today){
 		generationTable.insertAdjacentHTML('beforeend',
-			`<tr>
-				<td style='width:0px;'><div class='generationColor' ></div></td>
-				<td style='width:80px;'>${generation+i}</td>
-				<td>
-					<div id='innerProgressBar'>
-						<div class='outerProgressBar'>
-
-						</div>
-					</div>
-				</td>
-				<td class='progress'>%</td>
-			</tr>`
+			`<div class='tr' onclick='gotoInfo(${i})'>
+				<div class='generationColor' ></div>
+				<div class='generation'>${generation+i}</div>
+				<div class='innerProgressBar'>
+					<div class='outerProgressBar'></div>
+				</div>
+				<div class='progress'></div>
+			</div>`
 		)
 	} else if (new Date(graduateDate[i]) < today) generatedGeneration++;
 }
@@ -46,3 +42,11 @@ setInterval(() => {
 		}
 	}
 }, 10)
+
+const gotoInfo = (i) => {
+	localStorage.setItem('generation', generation+i);
+	localStorage.setItem('joinedDate', joinedDate[i]);
+	localStorage.setItem('graduateDate', graduateDate[i]);
+	location.href='./html/generation.html';
+	
+}
