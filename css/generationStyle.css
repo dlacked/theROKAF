@@ -68,28 +68,30 @@ html, body{
 }
 
 h1{
-	margin: 15px 0 0 35px;
 	font-size: 60px;
+	width: 85%;
+	margin: auto;
+	margin-top: 15px;
 }
 
 p{
-	margin: 20px 0 0 0;
+	margin: 20px 0 0 4px;
 	padding: 10px;
 	font-weight: bold;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
 	#generationCard{
 		height: 80vh;
 	}
 	
-}
-
-@media (max-width: 360px) {
-	
 	h1{
-		margin: 0 0 0 15px;
+		margin-top: 10px;
 		font-size: 40px;
+	}
+	
+	.clock{
+		font-size: 35px;
 	}
 	
 	#generationCard > .progress{

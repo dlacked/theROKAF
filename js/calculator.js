@@ -3,8 +3,8 @@ let newStartDate, newEndDate;
 let today;
 
 card.insertAdjacentHTML('beforeend', 
-	`<div><input type='date' class='date' onChange='calculateDate(0)'/></div>
-	<div><input type='date' class='date' onChange='calculateDate(1)'/></div>
+	`<div><input type='textbox' class='date' placeholder='yyyy/mm/dd' onkeyup='calculateDate(0)'/></div>
+	<div><input type='textbox' class='date' placeholder='yyyy/mm/dd' onkeyup='calculateDate(1)'/></div>
 	<div id='innerProgressBar'>
 		<div id='outerProgressBar'></div>
 	</div>
@@ -22,7 +22,6 @@ const calculateDate = (n) => {
 	} else{
 		newEndDate = new Date(document.getElementsByClassName('date')[1].value).setHours(0)
 	}
-	console.log(newStartDate, newEndDate);
 	if (newStartDate && newEndDate){
 		const counter = setInterval(() => {
 			today = new Date();
