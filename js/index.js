@@ -14,6 +14,7 @@ for (let i = 0; i < joinedDate.length; i++){
 					<div class='outerProgressBar'></div>
 				</div>
 				<div class='progress'></div>
+				<img id='arrow' src='./img/arrow.png' />
 			</div>`
 		)
 	} else if (new Date(graduateDate[i]) < today) generatedGeneration++;
@@ -23,8 +24,8 @@ const generationColor = document.getElementsByClassName('generationColor');
 const outerProgressBar = document.getElementsByClassName('outerProgressBar');
 
 for (let i = 0; generationColor[i] !== undefined; i++){
-	generationColor[i].style.backgroundColor = `rgb(${0+i*11}, ${0+i*31}, ${0+i*41})`
-	outerProgressBar[i].style.backgroundColor = `rgb(${0+i*11}, ${0+i*31}, ${0+i*41})`
+	generationColor[i].style.backgroundColor = `rgb(${0+i*5}, ${0+i*15}, ${0+i*20})`
+	outerProgressBar[i].style.backgroundColor = `rgb(${0+i*5}, ${0+i*15}, ${0+i*20})`
 }
 
 
@@ -36,12 +37,12 @@ setInterval(() => {
 	
 	for (let i = 0; joinedDate[i] !== undefined; i++){
 		if (new Date(graduateDate[i]) > today && outerProgressBar[i-generatedGeneration] !== undefined){
-			percent = (today - new Date(joinedDate[i])) / (new Date(graduateDate[i]) - new Date(joinedDate[i]))*100;
+			percent = (today - new Date(joinedDate[i]).setHours(0)) / (new Date(graduateDate[i]).setHours(0) - new Date(joinedDate[i]).setHours(0))*100;
 			outerProgressBar[i-generatedGeneration].style.width = `${percent.toFixed(7)}%`;
 			progress[i-generatedGeneration].innerText = `${percent.toFixed(7)}%`;
 		}
 	}
-}, 10)
+})
 
 const gotoInfo = (i) => {
 	localStorage.setItem('generation', generation+i);

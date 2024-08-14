@@ -3,7 +3,7 @@
 	"short_name": "theROKAF",
 	"icons": [
 		{
-			"src": "/img/therokaf_logo.png",
+			"src": "./img/therokaf_logo.png",
 			"type": "image/png",
 			"sizes": "600x600"
 		}

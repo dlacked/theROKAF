@@ -1,9 +1,9 @@
 const generationCard = document.querySelector('#generationCard');
 const joinedDate = localStorage.getItem('joinedDate');
 const graduateDate = localStorage.getItem('graduateDate');
-const newJoinedDate = new Date(joinedDate);
-const newGraduateDate = new Date(graduateDate);
-let today = new Date();;
+const newJoinedDate = new Date(joinedDate.replace(/-/g, "/"));
+const newGraduateDate = new Date(graduateDate.replace(/-/g, "/"));
+let today = new Date();
 
 generationCard.insertAdjacentHTML('beforeend', 
 	`<h1>${localStorage.getItem('generation')}</h1>
@@ -110,8 +110,8 @@ setInterval(() => {
 	
 	nowTime = (today - newJoinedDate);
 	leftTime = (newGraduateDate - today);
-	now.innerText = `${(nowTime/(8.64e+7)+1).toFixed()}`;
-	left.innerText = `${(leftTime/(8.64e+7)).toFixed()}`;
+	now.innerText = `${(nowTime/(8.64e+7)).toFixed()}`;
+	left.innerText = `${(leftTime/(8.64e+7)+1).toFixed()}`;
 })
 
 function SetProgress (obj) {
@@ -121,7 +121,7 @@ function SetProgress (obj) {
 }
 
 SetProgress.prototype.showProgress = function () {
-	percent = (today - new Date(this.startDate)) / (new Date(this.endDate) - new Date(this.startDate))*100;
+	percent = (new Date(today) - new Date(this.startDate).setHours(0)) / (new Date(this.endDate).setHours(0) - new Date(this.startDate).setHours(0))*100;
 	outerProgressBar[this.classNumber].style.width = `${percent.toFixed(7)}%`;
 	progress[this.classNumber].innerText = `${percent.toFixed(7)}%`;
 }

@@ -20,7 +20,7 @@ h1{
 
 .tr{
 	display: grid;
-	grid-template-columns: auto auto 1fr auto;
+	grid-template-columns: auto auto 1fr auto auto;
 	align-items:center;
 	height: 100px;
 	cursor: pointer;
@@ -85,15 +85,38 @@ h1{
 #copyright p{
 	font-size: 10px;
 	margin-top: auto;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	margin-left: -10px;
 	font-weight: bold;
+}
+
+#arrow{
+	width: 20px;
+}
+
+.tr > p{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
 }
 
 @media (max-width: 600px){
 	h1{
 		font-size: 7vw;
 	}
+	
+	.generation{
+		font-size: 20px;
+	}
+	
+	.progress{
+		font-size: 15px;
+	}
+	
+	.tr > p{
+		font-size: 20px;
+	}
+	
 }
 
 @media (max-width: 450px){
@@ -101,22 +124,35 @@ h1{
 		display: none;
 	}
 	
-	.generation{
-		font-size: 20px;
-	}
+	
+	
+	
+	
 }
 
 @media (max-width: 350px){
 	.generationColor{
-		display: none;
-	}
-	
-	.generation{
-		margin: 20px;
+		width: 15px;
+		height: 15px;
+		border-radius: 3px;
+		margin: 0;
+		margin-left: 20px;
 	}
 	
 	.progress{
 		font-size: 15px;
+	}
+	
+	.generation{
+		margin-left: 20px;
+	}
+	
+	#arrow{
+		width: 10px;
+	}
+	
+	.tr{
+		grid-template-columns: auto auto auto 1fr auto;
 	}
 }
 
