@@ -12,13 +12,17 @@ html, body{
 }
 
 #generationCard{
-	width: 500px;
+	width: 80vw;
 	height: 700px;
 	background-color: #f9f9f9;
 	border-radius: 15px;
 	margin: auto;
 }
 
+#generationCard > div{
+	width: 85%;
+	margin: auto;
+}
 
 .innerProgressBar{
 	margin: 0 auto;
@@ -38,19 +42,19 @@ html, body{
 }
 
 .progress{
-	margin-left: 32px;
 	font-size: 10px;
+	width: 85%;
+	margin: auto;
 }
 
 #generationCard > .progress{
 	font-size: 20px;
-	margin-left: 38px;
+	width: 85%;
 }
 
 .stack{
 	background-color: #f3f3f3;
 	height: auto;
-	width: 85%;
 	margin: auto;
 	padding-bottom: 20px;
 	border-radius: 15px;
@@ -64,57 +68,33 @@ html, body{
 }
 
 h1{
-	margin: 15px 0 0 35px;
 	font-size: 60px;
+	width: 85%;
+	margin: auto;
+	margin-top: 15px;
 }
 
 p{
-	margin: 20px 0 0 0;
+	margin: 20px 0 0 4px;
 	padding: 10px;
 	font-weight: bold;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
 	#generationCard{
-		width: 450px;
 		height: 80vh;
 	}
 	
-	.progress{
-		margin-left: 30px;
-	}
-
-	#generationCard > .progress{
-		margin-left: 35px;
-	}
-}
-
-@media (max-width: 450px) {
-	#generationCard{
-		width: 350px;
-	}
-	
-	.progress{
-		margin-left: 25px;
-	}
-
-	#generationCard > .progress{
-		margin-left: 25px;
-	}
-}
-
-@media (max-width: 360px) {
-	#generationCard{
-		width: 250px;
-	}
-	
 	h1{
-		margin: 0 0 0 15px;
+		margin-top: 10px;
 		font-size: 40px;
 	}
 	
+	.clock{
+		font-size: 35px;
+	}
+	
 	#generationCard > .progress{
-		margin-left: 20px;
 		font-size: 15px;
 	}
 	

@@ -1,0 +1,61 @@
+html, body{
+	margin: 0;
+	background-color: #f3f3f3;
+ 	font-family: Sans-serif, 'Apple SD Gothic Neo', 굴림;
+	height: 100vh;
+}
+
+#verticalCenterGrid{
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+}
+
+#card{
+	width: 70vw;
+	height: 200px;
+	background-color: #f9f9f9;
+	border-radius: 15px;
+	margin: auto;
+}
+
+#innerProgressBar{
+	margin: 0 auto;
+	width: 90%;
+	background-color: #f1f1f1;
+	height: 10px;
+	border-radius: 3px;
+	
+}
+
+#outerProgressBar{
+	width: 0%;
+	background-color: #0b106a;
+	height: 10px;
+	border-radius: 3px;
+	margin-top: 40px;
+}
+
+#card > div{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#progress{
+	margin-top: -10px;
+	font-size: 10px;
+}
+
+input{
+	all: unset;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	height: 50px;
+	align-items:center;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #f3f3f3;
+	border-radius: 8px;
+	margin-top: 10px;
+}
