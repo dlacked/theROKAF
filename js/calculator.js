@@ -3,7 +3,7 @@ let newStartDate, newEndDate;
 let today;
 
 card.insertAdjacentHTML('beforeend', 
-	`<div><input type='date' class='date' data-placeholder="kopre" onChange='calculateDate(0)' .></div>
+	`<div><input type='date' class='date' onChange='calculateDate(0)'/></div>
 	<div><input type='date' class='date' onChange='calculateDate(1)'/></div>
 	<div id='innerProgressBar'>
 		<div id='outerProgressBar'></div>
